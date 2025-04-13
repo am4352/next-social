@@ -35,6 +35,37 @@ const AddPost = () => {
                       /> 
                     Photo
                   </div>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                      <Image
+                      //hello
+                          src="/addVideo.png"
+                          alt=""
+                          width={20}
+                          height={20}
+                          className="w-5 h-5 cursor-pointer self-end"
+                      /> 
+                    Video
+                  </div>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                      <Image
+                          src="/addimage.png"
+                          alt=""
+                          width={20}
+                          height={20}
+                          className="w-5 h-5 cursor-pointer self-end"
+                      /> 
+                    Photo
+                  </div>
+                  <div className="flex items-center gap-2 cursor-pointer">
+                      <Image
+                          src="/addimage.png"
+                          alt=""
+                          width={20}
+                          height={20}
+                          className="w-5 h-5 cursor-pointer self-end"
+                      /> 
+                    Photo
+                  </div>
               </div>
         </div>         
      </div>
@@ -42,6 +73,13 @@ const AddPost = () => {
 }
 
 export default AddPost
+
+
+
+
+
+
+
 
 
 
