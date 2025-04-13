@@ -1,17 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['encrypted-tbn3.gstatic.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn3.gstatic.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picjumbo.com',
+      },
+    ],
   },
   experimental: {
     reactCompiler: true,
-    //ppr: 'incremental'
+    // ppr: 'incremental'
   },
 };
 
 export default nextConfig;
-
-
-
-
-

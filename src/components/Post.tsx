@@ -6,7 +6,7 @@ const Post = () => {
         {/*USER*/}
         <div className=''>
             <div className='flex item-center gap-4'>
-                <Image src='https://picjumbo.com/free-photos/ocean/' width={40} height={40} alt="" className=' w-10 h-10 rounded-full' />
+                <Image src="/cat.png" width={40} height={40} alt="" className=' w-10 h-10 rounded-full' />
             <span className="font-medium">Shashwat Mishra</span>    
             </div>
         </div>
