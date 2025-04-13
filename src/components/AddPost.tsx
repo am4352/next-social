@@ -37,7 +37,6 @@ const AddPost = () => {
                   </div>
                   <div className="flex items-center gap-2 cursor-pointer">
                       <Image
-                      //hello
                           src="/addVideo.png"
                           alt=""
                           width={20}
@@ -48,7 +47,7 @@ const AddPost = () => {
                   </div>
                   <div className="flex items-center gap-2 cursor-pointer">
                       <Image
-                          src="/addimage.png"
+                          src="/addevent.png"
                           alt=""
                           width={20}
                           height={20}
@@ -58,7 +57,7 @@ const AddPost = () => {
                   </div>
                   <div className="flex items-center gap-2 cursor-pointer">
                       <Image
-                          src="/addimage.png"
+                          src="/poll.png"
                           alt=""
                           width={20}
                           height={20}
