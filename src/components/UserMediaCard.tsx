@@ -2,7 +2,7 @@ import Feed from "./Feed"
 import LeftMenu from "./leftMenu/LeftMenu"
 import RightMenu from "./rightMenu/RightMenu"
 import Link from "next/link"
-import Image from "next/image"
+import Image from "next/image" // hello 
 
 const UserMediaCard = ({userId}:{userId:string}) => {
   return (
