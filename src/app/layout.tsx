@@ -9,7 +9,7 @@ import {
 } from '@clerk/nextjs'
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar"; // hello this is test branch 
+import Navbar from "@/components/NavBar"; // hello this is test branch 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
