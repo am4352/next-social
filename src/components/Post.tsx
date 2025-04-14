@@ -7,7 +7,7 @@ const Post = () => {
         <div className=''>
             <div className='flex item-center gap-4'>
                 {/*<Image src='' width={40} height={40} alt="" className=' w-10 h-10 rounded-full' />*/}
-                <Image src='/images/courses.png' width={40} height={40} alt="" className=' w-10 h-10 rounded-full'/>
+                {/*<Image src='public\accept.png' width={40} height={40} alt="" className=' w-10 h-10 rounded-full'/>*/}
             <span className="font-medium">Shashwat Mishra</span>    
             </div>
         </div>
