@@ -8,6 +8,7 @@ import {
     SignedOut,
     UserButton,
 } from "@clerk/nextjs";
+import UserMediaCard from "./UserMediaCard";
 
 const Navbar = () => {
     return (
@@ -84,6 +85,7 @@ const Navbar = () => {
                     </SignedOut>
                 </ClerkLoaded>
                 <MobileMenu />
+               
             </div>
         </div>
     );
