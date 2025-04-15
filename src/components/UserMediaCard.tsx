@@ -11,21 +11,37 @@ const UserMediaCard = ({userId}:{userId:string}) => {
         {/*TOP*/}
         <div className="flex justify-between items-center font-medium">
             <span className="text-gray-500">User Media</span>
-            <Link href="/" className="text-blue-500 text-xs">See all</Link>
+        <Link href="/" className="text-blue-500 text-xs">See all
+        </Link>
         </div>
         {/*BOTTOM*/}
-        <div className="flex flex-col gap-4 text-gray-500">
-            <div className="flex items-center gap-2">
-              <span className="text-xl text-black">Shashwat Mishra</span>
-              <span className="text-sm">@soul</span>
-            </div>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt excepturi, distinctio cum fugiat hic nobis officia
-            </p>    
-                <div className="flex items-center gap-2">
-                    <Image src="/map.png" alt="" width={16} height={16}/>
-                    <span>Living in <b>Denver</b></span>
-                </div>
+      <div className="flex gap-4 justify-between flex-wrap">
+        <div className="relative w-1/4 h-24">
+          <Image src="/tree.png"
+            alt=""
+            fill className="object-cover rounded-lg" />
+          
+        </div>
+        <div className="relative w-1/4 h-24">
+          <Image src="/tree.png"
+            alt=""
+            fill className="object-cover rounded-lg" />
+          
+        </div>
+        <div className="relative w-1/4 h-24">
+          <Image src="/tree.png"
+            alt=""
+            fill className="object-cover rounded-lg" />
+          
+        </div>
+        <div className="relative w-1/4 h-24">
+          <Image src="/tree.png"
+            alt=""
+            fill className="object-cover rounded-lg" />
+          
+        </div>
+            
+              
             
         </div>
         </div>
