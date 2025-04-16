@@ -1,25 +1,16 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
-// For TypeScript
-declare global {
-    var prisma: PrismaClient | undefined;
-}
+const globalForPrisma = globalThis as unknown as { prisma: PrismaClient };
 
-// Create a new PrismaClient instance
-let prismaInstance: PrismaClient;
+const prisma = globalForPrisma.prisma || new PrismaClient();
 
-// Initialize in a try-catch to handle potential errors
-try {
-    prismaInstance = global.prisma || new PrismaClient();
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
-    // In development, save to global to prevent multiple instances
-    if (process.env.NODE_ENV !== "production") {
-        global.prisma = prismaInstance;
-    }
-} catch (error) {
-    console.error("Failed to initialize Prisma client:", error);
-    // Provide a fallback or rethrow based on your needs
-    throw new Error("Database connection failed");
-}
+export default prisma;
 
-export const prisma = prismaInstance;
+
+
+
+
+
+
