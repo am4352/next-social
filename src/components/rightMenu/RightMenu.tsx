@@ -3,12 +3,14 @@ import Birthdays from "../Birthdays"
 import FriendRequests from "../FriendRequests"
 import UserInfoCard from "../UserInfoCard"
 import UserMediaCard from "../UserMediaCard"
+import ProfileCard from "../ProfileCard"
 
 const RightMenu = ({userId} : {userId?: string}) => {
   return (
     <div className="flex flex-col gap-6">
       {userId ? (
         <>
+            <ProfileCard /> 
         <UserInfoCard userId={userId} />
         <UserMediaCard userId={userId}/>
         </>

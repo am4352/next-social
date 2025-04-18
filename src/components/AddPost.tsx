@@ -4,7 +4,6 @@ import prisma from "@/lib/client";
 import { Prisma } from "@/generated/prisma";
 const AddPost = async() => {
 const {userId} = await auth();
-console.log(userId);
 
   const testAction = async(formData: FormData) => {
   "use server"

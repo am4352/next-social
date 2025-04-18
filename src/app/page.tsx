@@ -2,10 +2,12 @@
 import AddPost from "@/components/AddPost";
 import Stories from "@/components/Stories";
 import Feed from "@/components/Feed";
+import { auth } from "@clerk/nextjs/server";
 import LeftMenu from "@/components/leftMenu/LeftMenu";
 import RightMenu from "@/components/rightMenu/RightMenu";
 
-const Homepage = () => {
+const Homepage = async () => {
+   const { userId } = await auth();
   return (
     <div className="flex gap-6 pt-6">
       <div className="hidden xl:block w-[20%]">
@@ -19,7 +21,8 @@ const Homepage = () => {
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-        <RightMenu />
+      <RightMenu userId={userId ?? undefined} />
+
       </div>
     </div>
   );

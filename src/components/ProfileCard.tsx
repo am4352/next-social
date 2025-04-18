@@ -1,6 +1,22 @@
 import React from "react";
+import { auth } from "@clerk/nextjs/server";
+import prisma from "@/lib/client";
 import Image from "next/image";
-const ProfileCard = () => {
+const ProfileCard = async() => {
+ const {userId} = await auth();
+  console.log(userId)
+  console.log("hello i am anuj")
+  if (!userId) return null;
+   const user = await prisma.user.findFirst({
+    where:{
+      id:userId,
+    },
+   });
+  console.log(user)
+  if (!user) {
+  console.log("No user found with this ID.");
+}
+
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm gap-6">
       <div className="h-20 relative">

@@ -10,11 +10,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'picjumbo.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'fea9-103-4-221-252.ngrok-free.app', // Add ngrok URL here
+      },
     ],
   },
   experimental: {
     reactCompiler: true,
-    // ppr: 'incremental'
   },
 };
 
