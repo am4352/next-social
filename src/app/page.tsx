@@ -22,7 +22,7 @@ const Homepage = async () => {
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-      <RightMenu user={user} />
+      <RightMenu/>
 
       </div>
     </div>
