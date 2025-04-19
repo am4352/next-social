@@ -98,7 +98,7 @@ model story {
 }
 
 model user {
-  id                                           String          @id
+  id                                           String          @id @default(uuid())
   username                                     String          @unique(map: "User_username_key")
   avatar                                       String?
   cover                                        String?
