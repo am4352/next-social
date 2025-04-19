@@ -1,7 +1,8 @@
 
 import AddPost from "@/components/AddPost";
 import Stories from "@/components/Stories";
-import Feed from "@/components/Feed";
+import Feed from "@/components/feed/Feed";
+import { User } from "@prisma/client";
 import { auth } from "@clerk/nextjs/server";
 import LeftMenu from "@/components/leftMenu/LeftMenu";
 import RightMenu from "@/components/rightMenu/RightMenu";
@@ -21,7 +22,7 @@ const Homepage = async () => {
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-      <RightMenu userId={userId ?? undefined} />
+      <RightMenu user={user} />
 
       </div>
     </div>

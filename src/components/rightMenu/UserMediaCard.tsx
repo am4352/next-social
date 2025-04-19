@@ -1,10 +1,9 @@
-import Feed from "./Feed"
-import LeftMenu from "./leftMenu/LeftMenu"
-import RightMenu from "./rightMenu/RightMenu"
+
 import Link from "next/link"
 import Image from "next/image" // hello 
+import { User } from "@prisma/client"
 
-const UserMediaCard = ({userId}:{userId:string}) => {
+const UserMediaCard = ({user}:{user: User}) => {
   return (
     
     <div className='p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-4'>
