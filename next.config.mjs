@@ -12,7 +12,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'fea9-103-4-221-252.ngrok-free.app', // Add ngrok URL here
+        hostname: 'fea9-103-4-221-252.ngrok-free.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com', // ✅ Added Clerk image domain
       },
     ],
   },

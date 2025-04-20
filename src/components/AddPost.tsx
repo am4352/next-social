@@ -13,7 +13,7 @@ const {userId} = await auth();
      const res = await prisma.post.create({
         data: {
           userId:userId,
-          desc:desc
+          desc:desc,
         },
       })
   console.log(res);

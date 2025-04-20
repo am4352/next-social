@@ -10,24 +10,32 @@ const ProfileCard = async() => {
    const user = await prisma.user.findFirst({
     where:{
       id:userId,
-    },
+     },
+      include:{
+      _count:{
+        select:{
+          followers:true
+        }
+      }
+    }
    });
   console.log(user)
   if (!user) {
   console.log("No user found with this ID.");
-}
-
+  }
+  
+if(!user) return null
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-sm gap-6">
       <div className="h-20 relative">
         <Image
-          src="/tree.png"
+          src= {user.cover || "noCover.png"}
           alt=""
           fill
           className=" rounded-md object-cover"
         />
         <Image
-          src="/tree.png"
+          src= {user.avatar || "noAvatar.png"}
           alt=""
           width={48}
           height={48}
@@ -35,32 +43,11 @@ const ProfileCard = async() => {
         />
       </div>
       <div className="flex flex-col gap-2 items-center">
-        <span className="font-semibold">Anuj Mishra</span>
+        <span className="font-semibold">{(user.name && user.surname) ? user.name + " " + user.surname : user.username}</span>
         <div className="flex items-center gap-4">
           <div className="flex">
-            <Image
-              src="/tree.png"
-              alt=""
-              width={12}
-              height={12}
-              className=" rounded-full w-3 h-3 "
-            />
-            <Image
-              src="/tree.png"
-              alt=""
-              width={12}
-              height={12}
-              className=" rounded-full w-3 h-3 "
-            />
-            <Image
-              src="/tree.png"
-              alt=""
-              width={12}
-              height={12}
-              className=" rounded-full w-3 h-3 "
-            />
-                  </div>
-                  <span className="text-xs text-gray-500">500 Followers </span>
+                           </div>
+          <span className="text-xs text-gray-500">{user._count.followers} Followers</span>
               </div>
               <button className="bg-blue-500 text-white text-xs p-2 rounded-md">My Profile</button>
       </div>
