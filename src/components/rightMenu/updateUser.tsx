@@ -32,7 +32,7 @@ const UpdateUser = ({user}: {user: User}) => {
                             <span className="text-xs underline text-gray-600">Change</span>
                         </div>
                     </div>
-                    {/*WRAPPER*/}    
+                    {/*WRAPPER*/}    {/*DO FROM HERE  TIMESTAMP- 4:04:00*/}
             
                     <div className="flex flex-wrap justify-between gap-2 xl:gap-4">
                         {/*INPUTS*/}
