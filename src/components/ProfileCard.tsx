@@ -29,7 +29,7 @@ if(!user) return null
     <div className="p-4 bg-white rounded-lg shadow-md text-sm gap-6">
       <div className="h-20 relative">
         <Image
-          src= {user.cover || "noCover.png"}
+          src= {user.cover || "/noCover.png"}
           alt=""
           fill
           className=" rounded-md object-cover"
@@ -56,3 +56,8 @@ if(!user) return null
 };
 
 export default ProfileCard;
+
+
+
+
+

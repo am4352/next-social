@@ -12,11 +12,15 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'www.pexels.com', // ✅ properly wrapped and specified
+      },
+      {
+        protocol: 'https',
         hostname: 'fea9-103-4-221-252.ngrok-free.app',
       },
       {
         protocol: 'https',
-        hostname: 'img.clerk.com', // ✅ Added Clerk image domain
+        hostname: 'img.clerk.com',
       },
     ],
   },
