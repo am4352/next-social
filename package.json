@@ -18,6 +18,7 @@
     "react-dom": "^19.0.0-rc-f994737d14-20240522",
     "soci-start": "file:../next-social",
     "svix": "^1.64.1",
+    "uuid": "^11.1.0",
     "zod": "^3.24.3"
   },
   "devDependencies": {

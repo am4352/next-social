@@ -156,7 +156,7 @@ const UpdateUser = ({ user }: { user: User }) => {
               <span className="text-red-500">Something went wrong!</span>
             )}
             <div
-              className="absolute right-4 top-4 text-sm text-gray-500 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-md cursor-pointer transition duration-200"
+              className="absolute right-4 top-4 text-sm text-gray-500 bg-gray-100 hover:bg-red-400 px-3 py-1 rounded-md cursor-pointer transition duration-200"
               onClick={handleClose}
             >
               Close
