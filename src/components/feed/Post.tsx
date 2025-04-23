@@ -1,36 +1,46 @@
 import Image from "next/image";
 import Comments from "./Comments";
-const Post = () => {
+import {Post as PostType, User} from "@prisma/client";
+
+type FeedPostType = PostType & { user: User } & {
+  likes: [{ userId: string }];
+} & {
+  _count: { comments: number };
+
+} 
+
+const Post = ({post}:{post:FeedPostType}) => {
   return (
     <div className="flex flex-col gap-4 p-4 border rounded-lg shadow-sm bg-white">
       {/* USER */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Image
-            src="/cat.png"
+            src={post.user.avatar || "/noAvatar.png"}
             width={40}
             height={40}
             alt="User Avatar"
             className="w-10 h-10 rounded-full"
           />
-          <span className="font-medium">Shashwat Mishra</span>
+          <span className="font-medium">{
+          (post.user.name && post.user.surname) ? post.user.name + " " + post.user.surname : post.user.username}
+          </span>
         </div>
       </div>
 
       {/* DESC */}
       <div className="flex flex-col gap-4">
-        <div className="w-full min-h-96 relative">
-          <Image
-            src="/river.png"
-            alt="Post Image"
-            fill
-            className="object-cover rounded-md"
-          />
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsam nihil
-          sunt modi consequatur, ab perspiciatis aspernatur enim at porro.
-        </p>
+       {post.img && (
+          <div className="w-full min-h-96 relative">
+            <Image
+              src={post.img}
+              fill
+              className="object-cover rounded-md"
+              alt=""
+            />
+          </div>
+        )}
+         <p>{post.desc}</p>
       </div>
 
       {/* INTERACTIONS */}
@@ -73,7 +83,7 @@ const Post = () => {
               alt="Like"
             />
             <span className="text-gray-300">1</span>
-            <span className="text-gray-500">123
+            <span className="text-gray-500">
               <span className="hidden md:inline"> Share</span>
             </span>
           </div>
