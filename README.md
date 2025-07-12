@@ -12,26 +12,6 @@ This project helps you understand modern web app development with secure authent
 
 ---
 
-## 📌 Table of Contents
-
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Folder Structure](#folder-structure)
-- [Environment Variables (.env.local)](#environment-variables-envlocal)
-- [Getting Started](#getting-started)
-- [Clerk Setup](#clerk-setup)
-- [MySQL & Prisma Setup](#mysql--prisma-setup)
-- [Ngrok Setup](#ngrok-setup)
-- [Usage](#usage)
-- [Prisma Schema](#prisma-schema)
-- [Future Improvements](#future-improvements)
-- [Author](#author)
-- [License](#license)
-- [Disclaimer](#disclaimer)
-
----
-
 ## 📖 About the Project
 
 This is a **social media** platform where users can sign up, log in (via Clerk), and create short posts. It uses Prisma for database operations and MySQL as the relational DB. With Ngrok, you can easily expose your local server to the public web — perfect for demos or webhook testing.
