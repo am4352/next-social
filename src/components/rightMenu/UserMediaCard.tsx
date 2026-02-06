@@ -32,12 +32,14 @@ const UserMediaCard = async ({ user }: { user: User }) => {
         {postWithMedia.length
           ? postWithMedia.map((post) => (
               <div className="relative w-1/4 h-24" key={post.id}>
-                <Image
-                  src={post.img!}
-                  alt=""
-                  fill
-                  className="object-cover rounded-lg"
-                />
+                {post.img ? (
+  <Image
+    src={post.img}
+    alt="User media"
+    fill
+    className="object-cover rounded-lg"
+  />
+) : null}
               </div>
             ))
           : "NO media Found !"}
